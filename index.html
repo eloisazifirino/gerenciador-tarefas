@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de tarefas</title>
+</head>
+<body>
+
+    <header>
+       <h1>Gerenciador de Tarefas</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="area-cadastro">
+            <form action="" id="form-tarefa">
+
+                <div class="campo">
+                    <label for="tarefa">Tarefa</label>
+
+                    <input type="text" name="tarefa" id="tarefa" required>
+                </div>
+
+                <div class="campo">
+                    <label for="responsavel">Responsável</label>
+
+                    <input type="text" name="responsavel" id="responsavel" required>
+                </div>
+
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+
+                    <textarea name="descricao" id="descricao" required></textarea>
+                </div>
+
+                <fieldset class="campo-prioridade">
+                    <legend>Prioridade</legend>
+
+                    <label>
+                        <input type="radio" name="prioridade" value="baixa" required>
+                        Baixa
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="prioridade"
+                            value="media"
+                        >
+                        Média
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="prioridade"
+                            value="alta"
+                        >
+                        Alta
+                    </label>
+                </fieldset>
+
+
+            </form>
+        </section>
+
+    </main>
+
+
+    
+</body>
+</html>
