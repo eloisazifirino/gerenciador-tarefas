@@ -61,13 +61,90 @@
                     </label>
                 </fieldset>
 
+                <div class="campo">
+                    <label for="data-tarefa">Data da tarefa</label>
+
+                    <input type="date" name="data-tarefa" id="data-tarefa" required>
+                </div>
+
+                <div class="area-botao">
+                    <button type="submit" class="btn-add">Adicionar tarefa</button>
+                </div>
 
             </form>
+
+            <aside class="contadores-status">
+                <div class="contador">
+                    <span id="qtd-abertas">0</span>
+                    <p>Em aberto</p>
+                </div>
+
+                <div class="contador">
+                    <span id="qtd-andamento">0</span>
+                    <p>Em andamento</p>
+                </div>
+
+                <div class="contador">
+                    <span id="qtd-finalizada">0</span>
+                    <p>Finalizadas</p>
+                </div>
+
+            </aside>
+        </section>
+
+        <section class="contadores-prioridade">
+
+            <div class="contador-prioridade prioridade-baixa">
+                <h2>Baixa</h2>
+                <span id="qtd-baixa">0</span>
+            </div>
+
+            <div class="contador-prioridade prioridade-media">
+                <h2>Média</h2>
+                <span id="qtd-media">0</span>
+            </div>
+
+            <div class="contador-prioridade prioridade-alta">
+                <h2>Alta</h2>
+                <span id="qtd-alta">0</span>
+            </div>
+        </section>
+
+        <section class="quadro-tarefas">
+
+            <!-- Coluna: aberto -->
+            <section class="coluna-tarefas">
+                <h2>Aberto</h2>
+
+                <div
+                    id="lista-abertas"
+                    class="lista-tarefas"
+                ></div>
+            </section>
+
+            <!-- Coluna: em andamento -->
+            <section class="coluna-tarefas">
+                <h2>Em andamento</h2>
+
+                <div
+                    id="lista-andamento"
+                    class="lista-tarefas"
+                ></div>
+            </section>
+
+            <!-- Coluna: finalizada -->
+            <section class="coluna-tarefas">
+                <h2>Finalizada</h2>
+
+                <div
+                    id="lista-finalizadas"
+                    class="lista-tarefas"
+                ></div>
+            </section>
+
         </section>
 
     </main>
-
-
     
 </body>
 </html>
