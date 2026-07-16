@@ -1,33 +1,37 @@
 const CHAVE_TAREFAS = "gerenciador-tarefas";
 
+//ATRIBUINDO ELEMENTOS A VARIÁVEIS
 const formTarefa = document.querySelector("#form-tarefa");
 const campoTarefa = document.querySelector("#tarefa");
 const campoResponsavel = document.querySelector("#responsavel");
 const campoDescricao = document.querySelector("#descricao");
 const campoData = document.querySelector("#data-tarefa");
 
+//OBJETO DE LISTAS TAREFAS DA SECTION .quadro-tarefas
 const listasPorStatus = {
     aberta: document.querySelector("#lista-abertas"),
     andamento: document.querySelector("#lista-andamento"),
     finalizada: document.querySelector("#lista-finalizadas")
 };
 
+//OBJETO DO CONTABILIZADOR DE TAREFAS POR STATUS NA SECTION .contadores prioridades
 const contadoresStatus = {
     aberta: document.querySelector("#qtd-abertas"),
     andamento: document.querySelector("#qtd-andamento"),
     finalizada: document.querySelector("#qtd-finalizada")
 };
-
+//OBJETO DO CONTABILIZADOR DE TAREFAS POR PRIORIDADE NA SECTION .contadores prioridades
 const contadoresPrioridade = {
     baixa: document.querySelector("#qtd-baixa"),
     media: document.querySelector("#qtd-media"),
     alta: document.querySelector("#qtd-alta")
 };
 
+//TRATAMENTO DE ERROS
 let tarefas = carregarTarefas();
 
 function carregarTarefas() {
-    try {
+    try {                     //transforma a string do localStorage de volta em um json
         const tarefasSalvas = JSON.parse(localStorage.getItem(CHAVE_TAREFAS));
 
         return Array.isArray(tarefasSalvas) ? tarefasSalvas : [];
