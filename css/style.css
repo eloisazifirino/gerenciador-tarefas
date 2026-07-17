@@ -1,0 +1,153 @@
+:root {
+    --cor-azul: #052945;
+    --cor-cinza: #f7f6f5;
+    --cor-branca: #ffffff;
+    --cor-verde: #4caf50;
+    --cor-amarela: #ffc107;
+    --cor-vermelha: #f44336;
+}
+
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f6f5;
+    color: #052945;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.area-cadastro{
+    display: flex;
+    gap: 20px;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+#form-tarefa{
+    padding: 30px;
+    flex: 1;
+    border-radius: 8px;
+    background-color: #052945;
+    color: #ffffff;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+.campo textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-add {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background-color: #dddddd;
+}
+
+.contadores-status {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contador {
+    min-width: 140px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #052945;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contadores-prioridade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.contador-prioridade {
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.prioridade-baixa {
+    background-color: #4caf50;
+}
+
+.prioridade-media {
+    background-color: #ffc107;
+}
+
+.prioridade-alta {
+    background-color: #f44336;
+}
+
+.quadro-tarefas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.coluna-tarefas > h2 {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #052945;
+    text-align: center;
+}
+
+.lista-tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.card-tarefa {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+}
+
+.card-tarefa.prioridade-baixa {
+    border-left: 6px solid #4caf50;
+}
+
+.card-tarefa.prioridade-media {
+    border-left: 6px solid #ffc107;
+}
+
+.card-tarefa.prioridade-alta {
+    border-left: 6px solid #f44336;
+}
+
+/*RESPONSIVIDADE*/
